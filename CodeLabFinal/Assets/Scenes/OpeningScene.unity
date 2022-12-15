@@ -619,7 +619,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Welcome to title of game. You have to find the special stone in the cave
-    and travl through dangerous areas and pick up iteams to help you along the way.
+    and travel through dangerous areas and pick up items to help you along the way.
     There are two ways to get to the cave, choose your path wisely
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

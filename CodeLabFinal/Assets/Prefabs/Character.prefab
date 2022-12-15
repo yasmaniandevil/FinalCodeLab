@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3142338588049477136}
   - component: {fileID: 8142408242650854944}
-  - component: {fileID: 7137964606005908584}
+  - component: {fileID: 9139486705510408151}
+  - component: {fileID: 8230382232364975710}
   - component: {fileID: 8261355667204827903}
   m_Layer: 0
   m_Name: Character
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7137964606005908584
+--- !u!114 &9139486705510408151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,10 +96,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 4960587661922905976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61869add66860e745b4bf22e80874e8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 541ee2a574a58ef499518aec5a1bdee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.1
+  leftKey: 97
+  rightKey: 100
+  move: 0
+  hasSword: 0
+  sword: {fileID: 0}
+--- !u!114 &8230382232364975710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960587661922905976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f973e127c1225c46891cd8fd0df682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  spriteReplacement: {fileID: 0}
 --- !u!61 &8261355667204827903
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,9 +8,8 @@ public class WASD : MonoBehaviour
     public KeyCode leftKey = KeyCode.A;
     public KeyCode rightKey = KeyCode.D;
     public bool move;
-
     public bool hasSword;
-
+  
  
 
     // Start is called before the first frame update
@@ -18,6 +17,8 @@ public class WASD : MonoBehaviour
     {
         move = true; //sets boolean to true
         hasSword = false;
+
+        
     }
 
     // Update is called once per frame

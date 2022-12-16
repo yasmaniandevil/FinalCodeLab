@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class OnTriggerEnter : MonoBehaviour
+public class TriggerController : MonoBehaviour
 {
-
     public GameObject Buttons;
-    public GameObject Objects;
+
+    public GameObject player;
+
+
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,25 +18,27 @@ public class OnTriggerEnter : MonoBehaviour
             Buttons.SetActive(true);
             //if button is clicked
             //gameobject weapon unenable
-        
-           
-            
+
+
+
             /*if (Input.GetButtonDown("Pickup"))
             {
                 Debug.Log("Clicked button");
                 Objects.SetActive(false);
             }*/
 
-        } 
+            player.GetComponent<WASD>().move = false;
 
-     
-
+        }
     }
 
+    public void StartMove()
+    {
+        player.GetComponent<WASD>().move = true;
+    }
 
-
-
-
-
-
+    public void DestroyTrigger()
+    {
+        Destroy(GetComponent<BoxCollider2D>());
+    }
 }

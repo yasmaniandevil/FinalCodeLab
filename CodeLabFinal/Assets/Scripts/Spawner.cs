@@ -5,32 +5,35 @@ using TMPro;
 
 public class Spawner : MonoBehaviour
 {
+    //so i can access and change in inspector
+    public GameObject stonePrefab;
+    public GameObject player;
+    public float constantOffset;
+    
 
-    //public GameObject Stone;
-    public GameObject objToSpawn;
-    public Transform SpawnerHolder;
-    public GameObject Wall;
+    Vector2 playerPosition; //Vector 2 for player position
+
     // Start is called before the first frame update
     void Start()
     {
-        //Spawn();
+        
     }
 
-    // Update is called once per frame
+public void Spawn()
+    {
+        
+        //instantiates new prefab based off player position
+        GameObject newPrefab = Instantiate(stonePrefab, player.transform.position, player.transform.rotation);  
+    }
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            
-            Debug.Log("Clicked");
-            //Destroy(Wall);
+        float playerPosX = player.transform.position.x;
+        float playerPosY = player.transform.position.y;
+        //postion of x y and of of the player
 
-            Instantiate(objToSpawn, transform.position, transform.rotation);
-        }
+
+        playerPosition = new Vector2(playerPosX, playerPosY + constantOffset);
+
     }
-
-    /*void Spawn()
-    {
-        Instantiate(objToSpawn, transform.position, Quaternion.identity);
-    }*/
 }

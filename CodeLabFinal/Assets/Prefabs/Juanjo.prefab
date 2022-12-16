@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8142408242650854944}
   - component: {fileID: 9139486705510408151}
   - component: {fileID: 8230382232364975710}
+  - component: {fileID: 6701088879391932976}
   - component: {fileID: 8261355667204827903}
   m_Layer: 0
   m_Name: Juanjo
@@ -104,7 +105,6 @@ MonoBehaviour:
   rightKey: 100
   move: 0
   hasSword: 0
-  sword: {fileID: 0}
 --- !u!114 &8230382232364975710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +119,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   spriteReplacement: {fileID: 0}
+--- !u!114 &6701088879391932976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960587661922905976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0984273ea71eece428b2d6cd5b8576ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stonePrefab: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &8261355667204827903
 BoxCollider2D:
   m_ObjectHideFlags: 0

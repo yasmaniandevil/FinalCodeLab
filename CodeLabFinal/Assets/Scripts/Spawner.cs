@@ -6,10 +6,15 @@ using TMPro;
 public class Spawner : MonoBehaviour
 {
     //so i can access and change in inspector
-    public GameObject stonePrefab;
+    public GameObject Prefab;
     public GameObject player;
-    public float constantOffset;
-    
+    public float yOffset = 1;
+    public float xOffset = 1;
+
+    float playerPosX;
+    float playerPosY;
+
+
 
     Vector2 playerPosition; //Vector 2 for player position
 
@@ -23,17 +28,17 @@ public void Spawn()
     {
         
         //instantiates new prefab based off player position
-        GameObject newPrefab = Instantiate(stonePrefab, player.transform.position, player.transform.rotation);  
+        GameObject newPrefab = Instantiate(Prefab, playerPosition, player.transform.rotation);  
     }
 
     void Update()
     {
-        float playerPosX = player.transform.position.x;
-        float playerPosY = player.transform.position.y;
-        //postion of x y and of of the player
+        playerPosX = player.transform.position.x - xOffset;
+        playerPosY = player.transform.position.y + yOffset;
+        //postion x and y of the player
 
-
-        playerPosition = new Vector2(playerPosX, playerPosY + constantOffset);
+        //creates player position variable to be used in other function
+        playerPosition = new Vector2(playerPosX, playerPosY);
 
     }
 }

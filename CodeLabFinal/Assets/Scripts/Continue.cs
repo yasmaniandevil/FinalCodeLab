@@ -10,7 +10,8 @@ public class Continue : MonoBehaviour
 
     public void ContinueFunction()
     {
-        obj.GetComponent<TriggerController>().DestroyTrigger();
-        player.GetComponent<WASD>().move = true;
+        obj.GetComponent<TriggerController>().DestroyTrigger(); //gets function from trigger controller script
+        player.GetComponent<WASD>().move = true; //gets variable from WASD script
+        player.GetComponent<WASD>().chestInteracted = true; //gets variable from WASD script
     }
 }

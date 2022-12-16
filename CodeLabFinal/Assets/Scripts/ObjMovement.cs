@@ -8,6 +8,7 @@ public class ObjMovement : MonoBehaviour
     public GameObject objMove;
     public float speed = 2;
     public GameObject obstacle;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class ObjMovement : MonoBehaviour
         Vector2 newPos = transform.position;
         //creating vector 2 called new pos, thats where it currently is
 
-        newPos.x += speed;
+        newPos.x -= speed;
         //x position plus how fast 
 
         transform.position = newPos;
@@ -30,12 +31,15 @@ public class ObjMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Destroy(obstacle.gameObject);
-            Destroy(objMove.gameObject);
+            Debug.Log("Hello");
+            Destroy(obstacle); //will destroy object hit
+            Destroy(objMove); //will destory object shot
+
+            player.GetComponent<WASD>().rockPassed = true;
         }
      
     }

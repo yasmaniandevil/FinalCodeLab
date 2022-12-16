@@ -8,6 +8,9 @@ public class WeaponChestButton : MonoBehaviour
     public GameObject chest;
     public GameObject player;
 
+    public TextMeshProUGUI displayText;
+    public string changeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,17 @@ public class WeaponChestButton : MonoBehaviour
     // Update is called once per frame
     public void ChangeChest() //when button pressed, will call functions to change script of chest and player
     {
-        chest.GetComponent<SpriteChanger>().SpriteChange(); 
+        chest.GetComponent<SpriteChanger>().SpriteChange();
         player.GetComponent<WASD>().SwordEquipped();
+        ChangeText();
+
+
     }
+
+    public void ChangeText()
+    {
+        displayText.text = changeText;
+    }
+
+
 }

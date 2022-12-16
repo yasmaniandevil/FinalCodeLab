@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4960587661922905976, guid: 7ae88f9a689cc3d47bf496dfe97d626b, type: 3}
       propertyPath: m_Name
-      value: Character
+      value: Yasmine
       objectReference: {fileID: 0}
     - target: {fileID: 4960587661922905976, guid: 7ae88f9a689cc3d47bf496dfe97d626b, type: 3}
       propertyPath: m_TagString
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4415016931583066034}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 541ee2a574a58ef499518aec5a1bdee1, type: 3}
   m_Name: 
@@ -145,17 +145,3 @@ MonoBehaviour:
   rightKey: 100
   move: 1
   hasSword: 0
---- !u!114 &1389822380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415016931583066034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47be0a39a2397b4eb4cc48500cd1b36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 1389822379}
